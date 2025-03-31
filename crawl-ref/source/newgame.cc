@@ -1699,7 +1699,7 @@ static void _construct_weapon_menu(const newgame_def& ng,
         if (wpn_type == WPN_UNARMED)
         {
             choices.emplace_back(SK_UNARMED_COMBAT,
-                        species::has_claws(ng.species) ? "claws" : "unarmed");
+                        species::has_claws(ng.species) ? "claws" : "Unarmed");
         } else {
             string text = weapon_base_name(wpn_type);
             item_def dummy;

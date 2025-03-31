@@ -99,6 +99,8 @@ class MenuEntry
 public:
     string tag;
     string text;
+    int damage,speed;
+    string brand;
     int quantity, selected_qty;
     colour_t colour;
     vector<int> hotkeys;

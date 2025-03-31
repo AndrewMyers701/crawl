@@ -2202,7 +2202,7 @@ void process_command(command_type cmd, command_type prev_cmd)
     case CMD_EQUIP:                use_an_item(OPER_EQUIP);  break;
     case CMD_WEAR_ARMOUR:          use_an_item(OPER_WEAR);   break;
     case CMD_WEAR_JEWELLERY:       use_an_item(OPER_PUTON);  break;
-    case CMD_WIELD_WEAPON:         use_an_item(OPER_WIELD);  break;
+    case CMD_WIELD_WEAPON:         inspect_weapons();  break;
     case CMD_EVOKE:                use_an_item(OPER_EVOKE);  break;
     case CMD_ZAP_WAND:             zap_wand();               break;
     case CMD_DROP:

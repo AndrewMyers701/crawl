@@ -890,7 +890,7 @@ menu_letter InvMenu::load_items(const vector<const item_def*> &mitems,
 
         if (!inv_class[i])
             continue;
-
+            
         string subtitle = item_class_name(i);
 
         if (subkeys)
@@ -909,6 +909,7 @@ menu_letter InvMenu::load_items(const vector<const item_def*> &mitems,
                 subtitle += "</w><blue>)";
             }
         }
+    
         add_entry(new MenuEntry(subtitle, MEL_SUBTITLE));
 
         items_in_class.clear();
