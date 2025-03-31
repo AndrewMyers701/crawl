@@ -153,11 +153,3 @@ bool channelled_spell_active(spell_type spell);
 void start_channelling_spell(spell_type spell, string reminder_msg = "", bool do_effect = true);
 void stop_channelling_spells(bool quiet = false);
 void handle_channelled_spell();
-
-int list_weapons(bool toggle_with_I = true, bool viewing = false,
-    bool allow_preselect = true,
-    const string &title = "weild");
-void inspect_weapons();
-int calc_damage(const item_def &weapon);
-int calc_weapon_accuracy(const item_def &weapon);
-int calc_weapon_speed(const item_def &weapon);
