@@ -202,8 +202,8 @@ int list_weapons(bool toggle_with_I, bool viewing, bool allow_preselect,
         MEL_TITLE);
     weapon_menu.set_title(me, true, true);
     }
-   // weapon_menu.set_highlighter(nullptr);
-    //weapon_menu.set_tag("weapon");
+    weapon_menu.set_highlighter(nullptr);
+    weapon_menu.set_tag("weapon");
     // TODO: add toggling to describe mode with `?`, add help string, etc...
     weapon_menu.add_toggle_from_command(CMD_MENU_CYCLE_MODE);
     weapon_menu.add_toggle_from_command(CMD_MENU_CYCLE_MODE_REVERSE);
@@ -225,32 +225,6 @@ int list_weapons(bool toggle_with_I, bool viewing, bool allow_preselect,
     weapon_menu.menu_action = viewing ? Menu::ACT_EXAMINE : Menu::ACT_EXECUTE;
 
     int initial_hover = 0; 
-    /*
-    for (int i = 0; i < 52; ++i)
-    {
-        const char letter = index_to_letter(i);
-        const spell_type spell = get_spell_by_letter(letter);
-
-        if (!is_valid_spell(spell))
-        continue;
-
-        WeaponMenuEntry* me =
-        new WeaponMenuEntry(_spell_base_description(spell, viewing),
-                    _spell_extra_description(spell, viewing),
-                    MEL_ITEM, 1, letter);
-        me->colour = spell_highlight_by_utility(spell, COL_UNKNOWN, !viewing);
-    // TODO: maybe fill this from the quiver if there's a quivered spell and
-    // no last cast one?
-        if (allow_preselect && you.last_cast_spell == spell)
-        {
-            initial_hover = i;
-            me->preselected = true;
-        }
-
-        me->add_tile(tile_def(tileidx_spell(spell)));
-        weapon_menu.add_entry(me);
-    }
-*/
     for (int i = 0; i < 52; i++)
     {
         int letter = index_to_letter(i);
